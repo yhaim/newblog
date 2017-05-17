@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://www.semantic-ui.cn/examples/sticky.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Standard Meta -->
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>yhaim's blog 目录</title>
+
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="site.css">
+
+  <link rel="stylesheet" type="text/css" href="container.css">
+  <link rel="stylesheet" type="text/css" href="grid.css">
+  <link rel="stylesheet" type="text/css" href="header.css">
+  <link rel="stylesheet" type="text/css" href="image.css">
+  <link rel="stylesheet" type="text/css" href="menu.css">
+
+  <link rel="stylesheet" type="text/css" href="divider.css">
+  <link rel="stylesheet" type="text/css" href="list.css">
+  <link rel="stylesheet" type="text/css" href="segment.css">
+  <link rel="stylesheet" type="text/css" href="dropdown.css">
+  <link rel="stylesheet" type="text/css" href="icon.css">
+  <link rel="stylesheet" type="text/css" href="transition.css">
+  <link href="image/13.png" rel="shortcut icon" />
+
+  <script src="jquery.min.js.下载"></script>
+  <script src="transition.js.下载"></script>
+  <script src="dropdown.js.下载"></script>
+  <script src="visibility.js.下载"></script>
+  <script>
+  $(document)
+    .ready(function() {
+
+      // fix main menu to page on passing
+      $('.main.menu').visibility({
+        type: 'fixed'
+      });
+      $('.overlay').visibility({
+        type: 'fixed',
+        offset: 80
+      });
+
+      // lazy load images
+      $('.image').visibility({
+        type: 'image',
+        transition: 'vertical flip in',
+        duration: 500
+      });
+
+      // show dropdown on hover
+      $('.main.menu  .ui.dropdown').dropdown({
+        on: 'hover'
+      });
+    })
+  ;
+  </script>
+
+  <style type="text/css">
+
+  body {
+    background-color: #FFFFFF;
+  }
+  .main.container {
+    margin-top: 2em;
+  }
+
+  .main.menu {
+    margin-top: 4em;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    transition:
+      box-shadow 0.5s ease,
+      padding 0.5s ease
+    ;
+  }
+  .main.menu .item img.logo {
+    margin-right: 1.5em;
+  }
+
+  .overlay {
+    float: left;
+    margin: 0em 3em 1em 0em;
+  }
+  .overlay .menu {
+    position: relative;
+    left: 0;
+    transition: left 0.5s ease;
+  }
+
+  .main.menu.fixed {
+    background-color: #FFFFFF;
+    border: 1px solid #DDD;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  }
+  .overlay.fixed .menu {
+    left: 800px;
+  }
+
+  .text.container .left.floated.image {
+    margin: 2em 2em 2em -4em;
+  }
+  .text.container .right.floated.image {
+    margin: 2em -4em 2em 2em;
+  }
+
+  .ui.footer.segment {
+    margin: 5em 0em 0em;
+    padding: 5em 0em;
+  }
+  #goTopBtn {  
+    POSITION: fixed; TEXT-ALIGN: center; LINE-HEIGHT: 45px; WIDTH: 45px; BOTTOM: 35px; HEIGHT: 45px;  right: 5%;  border: solid 1px #c0c0c0;
+      }  
+  #mulu{
+      margin-bottom: 15px;
+      border-top: 1px solid #767676 ;
+  }
+  </style>
+
+</head>
+<body>
+
+  <!-- <div class="ui main text container">
+    <h1 class="ui header">你好你好你好</h1>
+    <p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好</p>
+  </div> -->
+
+
+  <div class="ui borderless main menu" style="">
+    <div class="ui text container">
+      <div href="#" class="header item">
+        <img class="logo" src="image\1.jpg">
+        yhaim's blog
+      </div>
+      <a href="#" class="item">Blog</a>
+      <a href="#" class="item">文章</a>
+      <a href="#" class="ui right floated dropdown item" tabindex="0">
+        Dropdown <i class="dropdown icon"></i>
+        <div class="menu" tabindex="-1">
+          <div class="item">Link Item</div>
+          <div class="item">Link Item</div>
+          <div class="divider"></div>
+          <div class="header">Header Item</div>
+          <div class="item">
+            <i class="dropdown icon"></i>
+            Sub Menu
+            <div class="menu">
+              <div class="item">Link Item</div>
+              <div class="item">Link Item</div>
+            </div>
+          </div>
+          <div class="item">Link Item</div>
+        </div>
+      </a>
+    </div>
+  </div><div class="ui borderless main menu placeholder" style="display: none;">
+    <!-- <div class="ui text container">
+      <div href="#" class="header item">
+        <img class="logo" src="image\1.jpg">
+        Project Name
+      </div>
+      <a href="http://www.semantic-ui.cn/examples/sticky.html#" class="item">Blog</a>
+      <a href="http://www.semantic-ui.cn/examples/sticky.html#" class="item">Articles</a>
+      <a href="http://www.semantic-ui.cn/examples/sticky.html#" class="ui right floated dropdown item" tabindex="0">
+        Dropdown <i class="dropdown icon"></i>
+        <div class="menu" tabindex="-1">
+          <div class="item">Link Item</div>
+          <div class="item">Link Item</div>
+          <div class="divider"></div>
+          <div class="header">Header Item</div>
+          <div class="item">
+            <i class="dropdown icon"></i>
+            Sub Menu
+            <div class="menu">
+              <div class="item">Link Item</div>
+              <div class="item">Link Item</div>
+            </div>
+          </div>
+          <div class="item">Link Item</div>
+        </div>
+      </a>
+    </div> -->
+  </div>
+
+
+ <div class="ui main text container">
+  <div id="mulu"></div>
+    <h1 class="ui header "><a href="文字页.html" style="color:#444">你好你好你好</a></h1>
+    <p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好</p>
+  </div>
+
+  <div class="ui main text container">
+  <div id="mulu"></div>
+    <h1 class="ui header "><a href="文字页.html" style="color:#444">你好你好你好</a></h1>
+    <p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好</p>
+  </div>
+
+  <div class="ui main text container">
+  <div id="mulu"></div>
+    <h1 class="ui header "><a href="文字页.html" style="color:#444">你好你好你好</a></h1>
+    <p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好</p>
+  </div>
+
+  <div class="ui main text container">
+  <div id="mulu"></div>
+    <h1 class="ui header "><a href="文字页.html" style="color:#444">你好你好你好</a></h1>
+    <p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好</p>
+  </div>
+
+  <div class="ui main text container">
+  <div id="mulu"></div>
+    <h1 class="ui header "><a href="文字页.html" style="color:#444">你好你好你好</a></h1>
+    <p>你好你好你好你好你好你好你好你好你好你好你好你好你好你好你好</p>
+  </div>
+
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+      <div class="ui stackable inverted divided grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">Group 1</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Link One</a>
+            <a href="#" class="item">Link Two</a>
+            
+           
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Group 2</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Link One</a>
+            <a href="#" class="item">Link Two</a>
+            
+           
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Group 3</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Link One</a>
+            <a href="#" class="item">Link Two</a>
+            
+           
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">Footer Header</h4>
+          <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+        </div>
+      </div>
+      <div class="ui inverted section divider"></div>
+      <img src="image\1.jpg" class="ui centered mini image">
+      <div class="ui horizontal inverted small divided link list">
+        <a class="item" href="http://www.semantic-ui.cn/examples/sticky.html#">Site Map</a>
+        <a class="item" href="http://www.semantic-ui.cn/examples/sticky.html#">Contact Us</a>
+        <a class="item" href="http://www.semantic-ui.cn/examples/sticky.html#">Terms and Conditions</a>
+        <a class="item" href="http://www.semantic-ui.cn/examples/sticky.html#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+<script type="text/javascript">  
+function goTopEx() {  
+    var obj = document.getElementById("goTopBtn");  
+    function getScrollTop() {  
+        return document.documentElement.scrollTop + document.body.scrollTop;  
+    }  
+    function setScrollTop(value) {  
+        if (document.documentElement.scrollTop) {  
+            document.documentElement.scrollTop = value;  
+        } else {  
+            document.body.scrollTop = value;  
+        }  
+    }  
+    window.onscroll = function() {  
+        getScrollTop() > 0 ? obj.style.display = "": obj.style.display = "none";  
+    }  
+    obj.onclick = function() {  
+        var goTop = setInterval(scrollMove, 10);  
+        function scrollMove() {  
+            setScrollTop(getScrollTop() / 1.1);  
+            if (getScrollTop() < 1) clearInterval(goTop);  
+        }  
+    }  
+}  
+</script>  
+
+
+        
+        
+        <div style="display:none" id="goTopBtn">顶部</div>
+
+        <script type=text/javascript>goTopEx();</script>
+
+
+
+
+
+</body></html>
